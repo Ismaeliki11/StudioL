@@ -1,0 +1,224 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Studio Light - Solid | Gradient | Ring</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Material+Symbols+Outlined" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="stage" aria-hidden="true"></div>
+
+  <div class="app">
+    <aside class="panel" id="panel" role="region" aria-label="Lighting controls">
+      <header class="panel-header">
+        <div class="panel-title">
+          <h1>Studio Light</h1>
+          <p>Virtual lighting for your desktop</p>
+        </div>
+        <div class="panel-actions">
+          <button id="hideBtn" class="icon-btn" title="Hide panel (H)">
+            <span class="material-symbols-outlined" aria-hidden="true">visibility_off</span>
+            <span class="sr-only">Hide panel</span>
+          </button>
+          <button id="fullscreenBtn" class="icon-btn primary" title="Toggle fullscreen (F)">
+            <span class="material-symbols-outlined" aria-hidden="true">fullscreen</span>
+            <span class="sr-only">Toggle fullscreen</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="mode-row" role="group" aria-label="Lighting mode controls">
+        <div class="mode-tabs">
+          <button class="mode-btn" id="modeSolid" type="button" aria-pressed="true">Solid</button>
+          <button class="mode-btn" id="modeGradient" type="button" aria-pressed="false">Gradient</button>
+          <button class="mode-btn" id="modeRing" type="button" aria-pressed="false">Ring</button>
+          <button id="lockBtn" class="mode-btn lock-btn" type="button" title="Lock controls (SPACE)">Lock</button>
+        </div>
+      </div>
+
+      <section class="panel-section" id="solidSection">
+        <div class="section-heading">
+          <h2 class="section-title">Solid Light</h2>
+          <span class="section-subtitle">Adjust a single color or temperature</span>
+        </div>
+        <div class="field-grid">
+          <div class="field">
+            <div class="field-label">
+              <label for="solidColor">Color</label>
+            </div>
+            <input type="color" id="solidColor" value="#ffffff" />
+          </div>
+          <div class="field">
+            <div class="field-label">
+              <label for="solidBrightness">Brightness</label>
+              <span class="value" id="solidBrightnessValue">100%</span>
+            </div>
+            <input type="range" id="solidBrightness" min="0" max="100" value="100" />
+          </div>
+          <div class="field">
+            <div class="field-label">
+              <label for="solidKelvin">Kelvin</label>
+              <span class="value" id="solidKelvinValue">5600K</span>
+            </div>
+            <input type="number" id="solidKelvin" min="1000" max="40000" step="100" value="5600" />
+          </div>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="useKelvin" />
+          <span>Use Kelvin scale</span>
+        </label>
+      </section>
+
+      <section class="panel-section hidden" id="gradientSection">
+        <div class="section-heading">
+          <h2 class="section-title">Gradient</h2>
+          <span class="section-subtitle">Blend two colors across the screen</span>
+        </div>
+        <div class="field-grid">
+          <div class="field">
+            <div class="field-label">
+              <label for="gradA">Color A</label>
+            </div>
+            <input type="color" id="gradA" value="#ffffff" />
+          </div>
+          <div class="field">
+            <div class="field-label">
+              <label for="gradB">Color B</label>
+            </div>
+            <input type="color" id="gradB" value="#a0a0ff" />
+          </div>
+          <div class="field">
+            <div class="field-label">
+              <label for="gradAngle">Angle</label>
+              <span class="value" id="gradAngleValue">0&deg;</span>
+            </div>
+            <input type="range" id="gradAngle" min="0" max="360" value="0" />
+          </div>
+          <div class="field">
+            <div class="field-label">
+              <label for="gradBlend">Blend</label>
+              <span class="value" id="gradBlendValue">50%</span>
+            </div>
+            <input type="range" id="gradBlend" min="0" max="100" value="50" />
+          </div>
+        </div>
+      </section>
+
+      <section class="panel-section hidden" id="ringSection">
+        <div class="section-heading">
+          <h2 class="section-title">Ring Light</h2>
+          <span class="section-subtitle">Simulate a studio ring light for your camera</span>
+        </div>
+        <div class="field-grid">
+          <div class="field">
+            <div class="field-label"><label for="ringColor">Ring Color</label></div>
+            <input type="color" id="ringColor" value="#ffffff" />
+          </div>
+          <div class="field">
+            <div class="field-label"><label for="ringBg">Background</label></div>
+            <input type="color" id="ringBg" value="#000000" />
+          </div>
+          <div class="field">
+            <div class="field-label">
+              <label for="ringBrightness">Brightness</label>
+              <span class="value" id="ringBrightnessValue">100%</span>
+            </div>
+            <input type="range" id="ringBrightness" min="0" max="100" value="100" />
+          </div>
+          <div class="field">
+            <div class="field-label">
+              <label for="ringSoft">Soft Edge</label>
+              <span class="value" id="ringSoftValue">45%</span>
+            </div>
+            <input type="range" id="ringSoft" min="0" max="100" value="45" />
+          </div>
+          <div class="field">
+            <div class="field-label">
+              <label for="ringInner">Inner Size</label>
+              <span class="value" id="ringInnerValue">35%</span>
+            </div>
+            <input type="range" id="ringInner" min="5" max="90" value="35" />
+          </div>
+          <div class="field">
+            <div class="field-label">
+              <label for="ringThickness">Thickness</label>
+              <span class="value" id="ringThicknessValue">18%</span>
+            </div>
+            <input type="range" id="ringThickness" min="2" max="40" value="18" />
+          </div>
+          <div class="field">
+            <div class="field-label">
+              <label for="ringX">Position X</label>
+              <span class="value" id="ringXValue">50%</span>
+            </div>
+            <input type="range" id="ringX" min="0" max="100" value="50" />
+          </div>
+          <div class="field">
+            <div class="field-label">
+              <label for="ringY">Position Y</label>
+              <span class="value" id="ringYValue">50%</span>
+            </div>
+            <input type="range" id="ringY" min="0" max="100" value="50" />
+          </div>
+        </div>
+        <div class="section-subtitle">Tip: Use arrow keys for fine adjustments. Hold <span class="kbd">Shift</span> for faster movement.</div>
+      </section>
+
+      <section class="panel-section">
+        <div class="section-heading">
+          <h2 class="section-title">Quick Presets</h2>
+        </div>
+        <div class="preset-buttons">
+          <button class="preset" data-preset="warm">Warm 3200K</button>
+          <button class="preset" data-preset="daylight">Daylight 5600K</button>
+          <button class="preset" data-preset="cool">Cool 6500K</button>
+          <button class="preset primary" data-preset="neutral">Neutral</button>
+          <button class="preset" data-preset="magenta">Magenta Tint</button>
+          <button class="preset" data-preset="green">Green Tint</button>
+        </div>
+        <div class="action-row">
+          <button id="savePreset" class="action-btn">
+            <span class="material-symbols-outlined" aria-hidden="true">save</span>
+            <span id="savePresetLabel">Save</span>
+          </button>
+          <button id="loadPreset" class="action-btn">
+            <span class="material-symbols-outlined" aria-hidden="true">folder_open</span>
+            <span>Load</span>
+          </button>
+        </div>
+      </section>
+
+      <footer class="panel-footer">
+        <div class="footer-row">
+          <div class="awake-indicator">
+            <span id="wakelockdot" class="dot" aria-hidden="true"></span>
+            <span>Screen awake</span>
+          </div>
+          <a id="helpLink" href="#" onclick="alert(shortcutsText);return false;">Shortcuts</a>
+        </div>
+      </footer>
+    </aside>
+
+    </div>
+
+  <div class="hint" id="hint">
+    <div class="hint-block">
+      <span>Press</span>
+      <kbd>F</kbd>
+      <span>for fullscreen</span>
+    </div>
+    <div class="hint-block">
+      <span>Press</span>
+      <kbd>H</kbd>
+      <span>to hide panel</span>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
