@@ -4,8 +4,7 @@
 
 Updated to **Next.js 14 + TypeScript** for performance, scalability, and ease of deployment.
 
-![Studio Light Banner](https://placehold.co/1200x600/0a0a0a/ffffff?text=Studio+Light+Preview)
-*(Replace with actual screenshot after deployment)*
+![Studio Light Preview](/studio-light-preview.png)
 
 ## ✨ Features
 
