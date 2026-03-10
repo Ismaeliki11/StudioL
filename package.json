@@ -1,6 +1,6 @@
 {
-  "name": "temp_next_app",
-  "version": "0.1.0",
+  "name": "studio-light",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",

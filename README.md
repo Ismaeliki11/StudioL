@@ -1,80 +1,114 @@
-# Studio Light 💡
+# Studio Light
 
-**Studio Light** is a professional virtual lighting application for your desktop. It turns your screen into a customizable softbox, gradient light, or ring light, perfect for video calls, streaming, or photography.
+<div align="center">
+  <img src="src/app/icon.png" alt="Studio Light Logo" width="128">
+  <br />
+  <p align="center">
+    <strong>Professional virtual lighting for your desktop.</strong>
+    <br />
+    Turn your screen into a customizable softbox, gradient light, or ring light.
+  </p>
 
-Updated to **Next.js 14 + TypeScript** for performance, scalability, and ease of deployment.
+  [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+  [![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react)](https://react.dev/)
+  [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+</div>
 
-![Studio Light Preview](public/studio-light-preview.png)
+---
 
-## ✨ Features
+## Overview
 
-- **Solid Light:** Adjustable color temperature (Kelvin 1000K-40000K) or custom RGB colors.
-- **Gradient Light:** Smoothly blend two colors with adjustable angles and blend amounts.
-- **Ring Light:** Simulates a physical ring light with controls for size, thickness, and softness.
-- **Quick Presets:** Instant access to standard lighting setups (Warm, Daylight, Cool, Magenta, Green).
-- **Wake Lock:** Automatically prevents your screen from sleeping while the light is active.
-- **Keyboard Shortcuts:** Professional hotkeys for quick control during streams.
-- **Fullscreen Mode:** Immersive lighting experience.
+Studio Light is a professional-grade web application designed to replace physical lighting equipment with your monitor. It provides precise control over color temperature, RGB values, and light shapes, making it an essential tool for video calls, streaming, and photography.
 
-## 🛠️ Tech Stack
+- **High Performance**: Built with Next.js for a fast and fluid user experience.
+- **Precision Control**: Adjustable Kelvin temperatures (1000K-40000K) and custom RGB blending.
+- **Workflow Focused**: Designed with professional keyboard shortcuts for real-time adjustments.
 
-- **Framework:** [Next.js 14](https://nextjs.org/) (App Directory)
-- **Language:** [TypeScript](https://www.typescriptlang.org/)
-- **Styling:** CSS Modules / Global CSS (Custom Design System)
-- **Icons:** [Lucide React](https://lucide.dev/)
-- **Deployment:** [Vercel](https://vercel.com/)
+---
 
-## 🚀 Getting Started
+## Features
 
-### Prerequisites
+- **Solid Light Mode**: Direct control over color temperature and solid RGB fills.
+- **Gradient Light Mode**: Smooth blending between two colors with adjustable angles and intensities.
+- **Ring Light Mode**: Virtual ring light simulation with controls for size, thickness, and feathering.
+- **Presets**: Instant access to industry-standard lighting: Warm (3200K), Daylight (5600K), and Cool (6500K).
+- **Wake Lock API**: Built-in prevention of screen sleep while the application is active.
 
-- Node.js 18+ installed
+---
 
-### Installation
+## Application Preview
 
-1.  Clone the repository:
-    ```bash
-    git clone https://github.com/YOUR_USER/studio-light.git
-    cd studio-light
-    ```
+<div align="center">
+  <img src="public/studio-light-preview.png" alt="Studio Light Studio Preview" width="800">
+</div>
 
-2.  Install dependencies:
-    ```bash
-    npm install
-    ```
+---
 
-3.  Run the development server:
-    ```bash
-    npm run dev
-    ```
+## Tech Stack
 
-4.  Open [http://localhost:3000](http://localhost:3000) in your browser.
+| Component | Technology |
+| :--- | :--- |
+| Framework | [Next.js](https://nextjs.org/) (App Router) |
+| UI Library | [React](https://react.dev/) |
+| Language | [TypeScript](https://www.typescriptlang.org/) |
+| Styling | CSS Modules & Global CSS |
+| Icons | [Lucide React](https://lucide.dev/) |
 
-## ⌨️ Keyboard Shortcuts
+---
+
+## Keyboard Shortcuts
 
 | Key | Action |
 | :--- | :--- |
 | `F` | Toggle Fullscreen |
 | `H` | Hide/Show Control Panel |
 | `Space` | Lock/Unlock Controls |
-| `1` | Switch to **Solid** Mode |
-| `2` | Switch to **Gradient** Mode |
-| `3` | Switch to **Ring** Mode |
-| `W` | Preset: Warm (3200K) |
-| `D` | Preset: Daylight (5600K) |
-| `C` | Preset: Cool (6500K) |
+| `1` | Switch to Solid Mode |
+| `2` | Switch to Gradient Mode |
+| `3` | Switch to Ring Mode |
+| `W` | Warm Preset (3200K) |
+| `D` | Daylight Preset (5600K) |
+| `C` | Cool Preset (6500K) |
 | `Arrows` | Move Ring Light |
 | `Shift + Arrows` | Move Ring Light (Fast) |
 
-## 📦 Deployment
+---
 
-This project is optimized for deployment on **Vercel**.
+## Getting Started
 
-1.  Push your code to GitHub.
-2.  Import the project into Vercel.
-3.  Vercel will detect the Next.js build settings automatically.
-4.  Click **Deploy**.
+### Prerequisites
 
-## 📄 License
+- Node.js 18+
 
-MIT License.
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Ismaeliki11/StudioL.git
+   cd StudioL
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start development:
+   ```bash
+   npm run dev
+   ```
+
+4. Open `http://localhost:3000` in your browser.
+
+---
+
+## Deployment
+
+Optimized for deployment on Vercel. Simply connect your GitHub repository and the build configuration will be detected automatically.
+
+---
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
