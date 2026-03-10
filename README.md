@@ -4,7 +4,7 @@
 
 Updated to **Next.js 14 + TypeScript** for performance, scalability, and ease of deployment.
 
-![Studio Light Preview](/studio-light-preview.png)
+![Studio Light Preview](public/studio-light-preview.png)
 
 ## ✨ Features
 
